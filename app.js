@@ -10,15 +10,6 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-var client  = mqtt.connect();
-
-
-var sub = client.subscribe("/myTopic");
-client.on("message", function(topic, payload) {
-console.log([topic, payload].join(": "));
-client.end();
-});
-client.publish("/myTopic","MQTT massage sent..");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

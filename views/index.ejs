@@ -3,9 +3,21 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div class = "row">
+      <div class= "col-md-3">
+        <a href="/change1" class="btn btn-info" role="button">Change Status LED 1</a><br><br>
+        <a href="/change2" class="btn btn-info" role="button">Change Status LED 2</a>
+      </div>
+      <div class = "col-md-3">
+        <p>LED1 is <%= led1Status %></p><br><br>
+        <p>LED2 is <%= led2Status %></p>
+      </div>
+    </div>
   </body>
 </html>
